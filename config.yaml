@@ -1,0 +1,66 @@
+# Luma pages to scan. City slugs map to luma.com/<slug>, for example:
+# nyc, sf, london, paris, berlin.
+luma:
+  cities:
+    - nyc
+  # Optional extra pages. Useful if Luma exposes a curated page you want too.
+  pages: []
+
+# Pick broad topics here. The keywords for each topic live in topic_keywords below.
+filters:
+  topics:
+    - ai
+    - tech
+    - fintech
+    - quant
+  custom_keywords: []
+  exclude_keywords:
+    - yoga
+    - dating
+    - speed friending
+    - meditation
+    - sound bath
+    - book club
+    - run club
+
+topic_keywords:
+  ai:
+    - ai
+    - artificial intelligence
+    - machine learning
+    - ml
+    - llm
+    - agentic
+  tech:
+    - tech
+    - software
+    - developer
+    - engineering
+    - startup
+    - python
+    - data science
+  fintech:
+    - fintech
+    - finance
+    - banking
+    - payments
+    - stablecoin
+    - crypto
+    - defi
+  quant:
+    - quant
+    - quantitative
+    - trading
+    - trader
+    - hedge fund
+    - market making
+    - hft
+    - high frequency
+    - derivatives
+    - alpha
+    - systematic
+    - research
+
+digest:
+  max_results: 20
+  fetch_per_source: 200
