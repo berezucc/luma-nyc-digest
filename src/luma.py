@@ -91,7 +91,7 @@ def _page_data(client: httpx.Client, slug: str) -> tuple[str | None, list[Event]
     return place_api_id, [Event.from_api(entry) for entry in entries]
 
 
-def fetch_events(category_slug: str, limit: int = 200, period: str = "upcoming") -> list[Event]:
+def fetch_events(category_slug: str, limit: int = 200) -> list[Event]:
     """Fetch Luma discover events, resolving city pages to their current place id."""
     events: list[Event] = []
     seen: set[str] = set()
@@ -110,7 +110,6 @@ def fetch_events(category_slug: str, limit: int = 200, period: str = "upcoming")
 
         while len(events) < limit:
             params: dict[str, Any] = {
-                "period": period,
                 "pagination_limit": min(page_size, limit - len(events)),
             }
             if place_api_id:

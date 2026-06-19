@@ -2,8 +2,8 @@ name: Weekly Luma Digest
 
 on:
   schedule:
-    # Mondays 14:00 UTC (10:00 AM ET during DST, 09:00 AM ET otherwise)
-    - cron: "0 14 * * 1"
+    # Mondays and Thursdays 14:00 UTC (10:00 AM ET during DST, 09:00 AM ET otherwise)
+    - cron: "0 14 * * 1,4"
   workflow_dispatch:
 
 permissions:
